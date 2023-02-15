@@ -6,7 +6,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Dav(props) {
-  const { nodes, materials } = useGLTF("/3D ANTONIO LOPEZ.gltf");
+  const { nodes, materials } = useGLTF("/4D ANTONIO LOPEZ.gltf");
   return (
     <group {...props} dispose={null}>
       <group position={[0, 0.39, 0]} rotation={[Math.PI / 2, 0, 0]}>
@@ -14,7 +14,7 @@ export function Dav(props) {
           castShadow
           receiveShadow
           geometry={nodes["TQ_ARD-geom"].geometry}
-          material={materials.TQ_ARD_front}
+          material={materials["back-dil"]}
         />
         <mesh
           castShadow
@@ -33,4 +33,4 @@ export function Dav(props) {
   );
 }
 
-useGLTF.preload("/3D ANTONIO LOPEZ.gltf");
+useGLTF.preload("/4D ANTONIO LOPEZ.gltf");
